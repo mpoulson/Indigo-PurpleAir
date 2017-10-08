@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<PluginConfig>
+	<Field id="infoLabel" type="label">
+		<Label>PurpleAir Plugin</Label>
+	</Field>
+	 <Field id="sep1" type="separator"/>
+    <Field id="updateFrequency" type="textfield" defaultValue="24">
+        <Label>Check for plugin update frequency (hours):</Label>
+    </Field>
+    <Field id="updateNote" type="label" fontSize="small" fontColor="darkgray">
+        <Label>The plugin will not check for updates if the frequency is set to zero.</Label>
+    </Field>
+    <Field type="textfield" id="refreshInterval" tooltip="Seconds between device refresh" defaultValue="30">
+		<Label>Device Data Refresh Interval:</Label>
+	</Field>
+	<Field id="simpleSeparator6" type="separator"/>
+	<Field type="checkbox" id="sendTelemetry"
+		tooltip="Enables sending Telemetry to plugin developer." defaultValue="true">
+		<Label>Enable Telemetry:</Label>
+	</Field>
+	<Field id="telemetryNote" type="label" fontSize="small" fontColor="darkgray">
+        <Label>Telemetry will help the plugin developer catch errors and help improve it.</Label>
+    </Field>
+	<Field id="simpleSeparator5" type="separator"/>
+	<Field type="checkbox" id="showDebugInLog"
+		tooltip="This enables lots of debugging messages in the Indigo Event Log.">
+		<Label>Enable debugging:</Label>
+		<Description>(use carefully)</Description>
+	</Field>
+</PluginConfig>
