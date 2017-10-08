@@ -33,7 +33,7 @@ class Plugin(indigo.PluginBase):
 		self.restartCount = 0
 
 	def _refreshStatesFromHardware(self, dev):
-		self.debugLog(u"Getting data for Sensor : %s" % a)
+		self.debugLog(u"Getting data for Sensor : %s" % dev.address)
 		data = PurpleAir.GetData(self.PurpleAir,dev.address)
 
 		#TODO Add logic to not post when no changes
