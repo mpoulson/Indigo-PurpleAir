@@ -20,27 +20,27 @@
 				<ControlPageLabel>name</ControlPageLabel>
 			</State>
 			<State id="currentTemp">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>currentTemp</TriggerLabel>
 				<ControlPageLabel>currentTemp</ControlPageLabel>
 			</State>
 			<State id="currentHumidity">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>currentHumidity</TriggerLabel>
 				<ControlPageLabel>currentHumidity</ControlPageLabel>
 			</State>
 			<State id="currentDewPoint">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>currentDewPoint</TriggerLabel>
 				<ControlPageLabel>currentDewPoint</ControlPageLabel>
 			</State>
 			<State id="currentPressure">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>currentPressure</TriggerLabel>
 				<ControlPageLabel>currentPressure</ControlPageLabel>
 			</State>
 			<State id="uptime">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>uptime</TriggerLabel>
 				<ControlPageLabel>uptime</ControlPageLabel>
 			</State>
@@ -75,32 +75,32 @@
 				<ControlPageLabel>lon</ControlPageLabel>
 			</State>
 			<State id="currentHumidity">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>currentHumidity</TriggerLabel>
 				<ControlPageLabel>currentHumidity</ControlPageLabel>
 			</State>
 			<State id="currentDewPoint">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>currentDewPoint</TriggerLabel>
 				<ControlPageLabel>currentDewPoint</ControlPageLabel>
 			</State>
 			<State id="currentPressure">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>currentPressure</TriggerLabel>
 				<ControlPageLabel>currentPressure</ControlPageLabel>
 			</State>
 			<State id="current25">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>current25</TriggerLabel>
 				<ControlPageLabel>current25</ControlPageLabel>
 			</State>
 			<State id="current10">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>current10</TriggerLabel>
 				<ControlPageLabel>current10</ControlPageLabel>
 			</State>
 			<State id="current1">
-				<ValueType>String</ValueType>
+				<ValueType>Number</ValueType>
 				<TriggerLabel>current1</TriggerLabel>
 				<ControlPageLabel>current1</ControlPageLabel>
 			</State>
