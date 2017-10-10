@@ -3,7 +3,11 @@
 	<Field id="infoLabel" type="label">
 		<Label>PurpleAir Plugin</Label>
 	</Field>
-	 <Field id="sep1" type="separator"/>
+	<Field id="sep2" type="separator"/>
+    <Field id="distanceMiles" type="textfield" defaultValue="10">
+        <Label>Number of Miles to search for Remote Sensors:</Label>
+    </Field>
+	<Field id="sep1" type="separator"/>
     <Field id="updateFrequency" type="textfield" defaultValue="24">
         <Label>Check for plugin update frequency (hours):</Label>
     </Field>

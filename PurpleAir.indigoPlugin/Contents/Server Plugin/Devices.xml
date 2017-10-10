@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Devices>
-	<Device type="custom" id="PurpleAirSensor">
-		<Name>PurpleAir Sensor</Name>
+	<Device type="custom" id="LocalPurpleAirSensor">
+		<Name>Local PurpleAir Sensor</Name>
 		<ConfigUI>
 			<Field id="address" type="textfield" >
 				<Label>Sensor Address:</Label>
@@ -36,6 +36,128 @@
 			</State>
 			<State id="currentPressure">
 				<ValueType>Number</ValueType>
+				<TriggerLabel>currentPressure</TriggerLabel>
+				<ControlPageLabel>currentPressure</ControlPageLabel>
+			</State>
+			<State id="uptime">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>uptime</TriggerLabel>
+				<ControlPageLabel>uptime</ControlPageLabel>
+			</State>
+			<State id="version">
+				<ValueType>String</ValueType>
+				<TriggerLabel>version</TriggerLabel>
+				<ControlPageLabel>version</ControlPageLabel>
+			</State>
+			<State id="hardwarediscovered">
+				<ValueType>String</ValueType>
+				<TriggerLabel>hardwarediscovered</TriggerLabel>
+				<ControlPageLabel>hardwarediscovered</ControlPageLabel>
+			</State>
+			<State id="hardwareversion">
+				<ValueType>String</ValueType>
+				<TriggerLabel>hardwareversion</TriggerLabel>
+				<ControlPageLabel>hardwareversion</ControlPageLabel>
+			</State>
+			<State id="geo">
+				<ValueType>String</ValueType>
+				<TriggerLabel>geo</TriggerLabel>
+				<ControlPageLabel>geo</ControlPageLabel>
+			</State>
+			<State id="lat">
+				<ValueType>String</ValueType>
+				<TriggerLabel>lat</TriggerLabel>
+				<ControlPageLabel>lat</ControlPageLabel>
+			</State>
+			<State id="lon">
+				<ValueType>String</ValueType>
+				<TriggerLabel>lon</TriggerLabel>
+				<ControlPageLabel>lon</ControlPageLabel>
+			</State>
+			<State id="currentHumidity">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>currentHumidity</TriggerLabel>
+				<ControlPageLabel>currentHumidity</ControlPageLabel>
+			</State>
+			<State id="currentDewPoint">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>currentDewPoint</TriggerLabel>
+				<ControlPageLabel>currentDewPoint</ControlPageLabel>
+			</State>
+			<State id="currentPressure">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>currentPressure</TriggerLabel>
+				<ControlPageLabel>currentPressure</ControlPageLabel>
+			</State>
+			<State id="current25">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>current25</TriggerLabel>
+				<ControlPageLabel>current25</ControlPageLabel>
+			</State>
+			<State id="current10">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>current10</TriggerLabel>
+				<ControlPageLabel>current10</ControlPageLabel>
+			</State>
+			<State id="current1">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>current1</TriggerLabel>
+				<ControlPageLabel>current1</ControlPageLabel>
+			</State>
+		</States>
+	</Device>
+	<Device type="custom" id="RemotePurpleAirSensor">
+		<Name>Remote PurpleAir Sensor</Name>
+		<ConfigUI>
+			<Field id="sensor" type="menu">
+				<Label>PurpleAir Sensor:</Label>
+				<List class="self" filter="" method="sensorList"/>
+				<CallbackMethod>selectionChanged</CallbackMethod>
+			</Field>
+			<Field type="textfield" id="id" readonly="true">
+				<Label>Device ID:</Label>
+			</Field>
+			<Field type="textfield" id="name" readonly="true">
+				<Label>System Name:</Label>
+			</Field>
+			<Field type="textfield" id="model" readonly="true">
+				<Label>System Type:</Label>
+			</Field>
+			<Field type="textfield" id="lat" readonly="true">
+				<Label>Latitude:</Label>
+			</Field>
+			<Field type="textfield" id="lon" readonly="true">
+				<Label>Longitude:</Label>
+			</Field>
+		</ConfigUI>
+		<States>
+			<State id="name">
+				<ValueType>String</ValueType>
+				<TriggerLabel>name</TriggerLabel>
+				<ControlPageLabel>name</ControlPageLabel>
+			</State>
+			<State id="AQI">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>AQI</TriggerLabel>
+				<ControlPageLabel>AQI</ControlPageLabel>
+			</State>
+			<State id="currentTemp">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>currentTemp</TriggerLabel>
+				<ControlPageLabel>currentTemp</ControlPageLabel>
+			</State>
+			<State id="currentHumidity">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>currentHumidity</TriggerLabel>
+				<ControlPageLabel>currentHumidity</ControlPageLabel>
+			</State>
+			<State id="currentDewPoint">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>currentDewPoint</TriggerLabel>
+				<ControlPageLabel>currentDewPoint</ControlPageLabel>
+			</State>
+			<State id="currentPressure">
+				<ValueType>String</ValueType>
 				<TriggerLabel>currentPressure</TriggerLabel>
 				<ControlPageLabel>currentPressure</ControlPageLabel>
 			</State>

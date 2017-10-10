@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <MenuItems>
-	<MenuItem id="sep1" />
+	 <MenuItem id="menu1">
+        <Name>Rescan for Devices</Name>
+        <CallbackMethod>buildAvailableDeviceList</CallbackMethod>
+    </MenuItem>
+    <MenuItem id="sep1" />
 	 <MenuItem id="checkForUpdates">
         <Name>Check for Updates</Name>
         <CallbackMethod>checkForUpdates</CallbackMethod>
