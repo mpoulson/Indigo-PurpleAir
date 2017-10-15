@@ -55,10 +55,6 @@ class Plugin(indigo.PluginBase):
 		except: self.de (dev, "currentPressure")
 		try: self.updateStateOnServer(dev, "current25", float(data.current25))
 		except: self.de (dev, "current25")
-		try: self.updateStateOnServer(dev, "hardwarediscovered", data.hardwarediscovered)
-		except: self.de (dev, "hardwarediscovered")
-		try: self.updateStateOnServer(dev, "hardwareversion", data.hardwareversion)
-		except: self.de (dev, "hardwareversion")
 		try: self.updateStateOnServer(dev, "lat", data.lat)
 		except: self.de (dev, "lat")
 		try: self.updateStateOnServer(dev, "lon", data.lon)
@@ -77,12 +73,17 @@ class Plugin(indigo.PluginBase):
 			except: self.de (dev, "currentDewPoint")
 			try: self.updateStateOnServer(dev, "uptime", int(data.uptime))
 			except: self.de (dev, "uptime")
+			try: self.updateStateOnServer(dev, "hardwarediscovered", data.hardwarediscovered)
+			except: self.de (dev, "hardwarediscovered")
+			try: self.updateStateOnServer(dev, "hardwareversion", data.hardwareversion)
+			except: self.de (dev, "hardwareversion")
+		#twilioDevice.updateStateImageOnServer(indigo.kStateImageSel.SensorOn)
 
 
 	def updateStateOnServer(self, dev, state, value):
-		if dev.states[state] != value and (dev.states[state] != "" and value != None):
-			#self.debugLog(u"Updating Device: %s, State: %s, Value: '%s', From Current Value '%s'" % (dev.name, state, value, dev.states[state]))
-			dev.updateStateOnServer(state, value)
+		# if dev.states[state] != value and (dev.states[state] != "" and value != None):
+		# 	self.debugLog(u"Updating Device: %s, State: %s, Value: '%s', From Current Value '%s'" % (dev.name, state, value, dev.states[state]))
+		dev.updateStateOnServer(state, value)
 
 	def de (self, dev, value):
 		self.errorLog ("[%s] No value found for device: %s, field: %s" % (time.asctime(), dev.name, value))
@@ -165,19 +166,20 @@ class Plugin(indigo.PluginBase):
 			data = PurpleAir.GetRemoteData(self.PurpleAir,dev.address)
 
 		self.updateStateOnServer(dev,"currentTemp", data.currentTemp)
-		self.updateStateOnServer(dev,"uptime", data.uptime)
-		self.updateStateOnServer(dev,"version", data.version)
-		self.updateStateOnServer(dev,"hardwarediscovered", data.hardwarediscovered)
-		self.updateStateOnServer(dev,"hardwareversion", data.hardwareversion)
 		self.updateStateOnServer(dev,"name", data.label)
 		self.updateStateOnServer(dev,"lat", data.lat)
 		self.updateStateOnServer(dev,"lon", data.lon)
 		self.updateStateOnServer(dev,"currentHumidity", data.currentHumidity)
-		self.updateStateOnServer(dev,"currentDewPoint", data.currentDewPoint)
 		self.updateStateOnServer(dev,"currentPressure", str(data.currentPressure))
 		self.updateStateOnServer(dev,"current25", data.current25)
-		self.updateStateOnServer(dev,"current10", data.current10)
-		self.updateStateOnServer(dev,"current1", data.current1)
+		if dev.deviceTypeId != "RemotePurpleAirSensor":
+			self.updateStateOnServer(dev,"current10", data.current10)
+			self.updateStateOnServer(dev,"current1", data.current1)
+			self.updateStateOnServer(dev,"uptime", data.uptime)
+			self.updateStateOnServer(dev,"version", data.version)
+			self.updateStateOnServer(dev,"hardwarediscovered", data.hardwarediscovered)
+			self.updateStateOnServer(dev,"hardwareversion", data.hardwareversion)
+			self.updateStateOnServer(dev,"currentDewPoint", data.currentDewPoint)
 
 	def buildAvailableDeviceList(self):
 		self.debugLog("Building Available Device List")
